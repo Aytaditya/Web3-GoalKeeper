@@ -34,6 +34,7 @@ contract Accountablity {
         payable(owner).transfer(amount); // transfer the balance to the owner
     }
 
+    // internal function to check if all tasks are completed
     function allTasksCompleted() private view returns(bool){
         for(uint256 i=0; i<tasks.length; i++){
             if(!tasks[i].isCompleted){
